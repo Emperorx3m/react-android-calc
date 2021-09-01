@@ -1,3 +1,8 @@
+.redd{
+     background-color: red !important;
+     color: white !important;
+ }
+
 .App {
   text-align: center;
 }
@@ -5,6 +10,12 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+@media (max-width : 500px){
+  .button{
+    padding-left: 0.7em !important;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
