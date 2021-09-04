@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-android-calc/static/css/main.bb374179.chunk.css",
-    "main.js": "/react-android-calc/static/js/main.253e63a3.chunk.js",
-    "main.js.map": "/react-android-calc/static/js/main.253e63a3.chunk.js.map",
-    "runtime-main.js": "/react-android-calc/static/js/runtime-main.d04a8ca2.js",
-    "runtime-main.js.map": "/react-android-calc/static/js/runtime-main.d04a8ca2.js.map",
-    "static/js/2.dad8970f.chunk.js": "/react-android-calc/static/js/2.dad8970f.chunk.js",
-    "static/js/2.dad8970f.chunk.js.map": "/react-android-calc/static/js/2.dad8970f.chunk.js.map",
-    "static/js/3.6fc52ed0.chunk.js": "/react-android-calc/static/js/3.6fc52ed0.chunk.js",
-    "static/js/3.6fc52ed0.chunk.js.map": "/react-android-calc/static/js/3.6fc52ed0.chunk.js.map",
+    "main.js": "/react-android-calc/static/js/main.2033fba8.chunk.js",
+    "main.js.map": "/react-android-calc/static/js/main.2033fba8.chunk.js.map",
+    "runtime-main.js": "/react-android-calc/static/js/runtime-main.648fa37b.js",
+    "runtime-main.js.map": "/react-android-calc/static/js/runtime-main.648fa37b.js.map",
+    "static/js/2.17edd5bc.chunk.js": "/react-android-calc/static/js/2.17edd5bc.chunk.js",
+    "static/js/2.17edd5bc.chunk.js.map": "/react-android-calc/static/js/2.17edd5bc.chunk.js.map",
+    "static/js/3.bef7cea4.chunk.js": "/react-android-calc/static/js/3.bef7cea4.chunk.js",
+    "static/js/3.bef7cea4.chunk.js.map": "/react-android-calc/static/js/3.bef7cea4.chunk.js.map",
     "index.html": "/react-android-calc/index.html",
     "static/css/main.bb374179.chunk.css.map": "/react-android-calc/static/css/main.bb374179.chunk.css.map",
-    "static/js/2.dad8970f.chunk.js.LICENSE.txt": "/react-android-calc/static/js/2.dad8970f.chunk.js.LICENSE.txt"
+    "static/js/2.17edd5bc.chunk.js.LICENSE.txt": "/react-android-calc/static/js/2.17edd5bc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d04a8ca2.js",
-    "static/js/2.dad8970f.chunk.js",
+    "static/js/runtime-main.648fa37b.js",
+    "static/js/2.17edd5bc.chunk.js",
     "static/css/main.bb374179.chunk.css",
-    "static/js/main.253e63a3.chunk.js"
+    "static/js/main.2033fba8.chunk.js"
   ]
 }
