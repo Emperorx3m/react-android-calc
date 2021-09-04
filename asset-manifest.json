@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-android-calc/static/css/main.bb374179.chunk.css",
-    "main.js": "/react-android-calc/static/js/main.2033fba8.chunk.js",
-    "main.js.map": "/react-android-calc/static/js/main.2033fba8.chunk.js.map",
+    "main.js": "/react-android-calc/static/js/main.806feefc.chunk.js",
+    "main.js.map": "/react-android-calc/static/js/main.806feefc.chunk.js.map",
     "runtime-main.js": "/react-android-calc/static/js/runtime-main.648fa37b.js",
     "runtime-main.js.map": "/react-android-calc/static/js/runtime-main.648fa37b.js.map",
     "static/js/2.17edd5bc.chunk.js": "/react-android-calc/static/js/2.17edd5bc.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.648fa37b.js",
     "static/js/2.17edd5bc.chunk.js",
     "static/css/main.bb374179.chunk.css",
-    "static/js/main.2033fba8.chunk.js"
+    "static/js/main.806feefc.chunk.js"
   ]
 }
