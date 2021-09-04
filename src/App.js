@@ -117,6 +117,7 @@ class App extends Component {
      tott.style.removeProperty('border')
       tott.style.removeProperty('color')
 
+    
     let cl = this.calculatix()
       if (cl === 'error') {
         this.setState({
@@ -298,7 +299,7 @@ class App extends Component {
             else if(radd){
 
                cl = parser.evaluate(stkcopy)
-              return new Intl.NumberFormat().format(cl).toFixed(10)
+              return new Intl.NumberFormat().format(cl)
             }
 
               
@@ -324,6 +325,8 @@ class App extends Component {
         keyy: nk,
         keyycopy: nk//Object.assign()
       },this.calc_on_keyup)
+
+    
     }
 
     hClick = (bt) => {
@@ -341,7 +344,7 @@ class App extends Component {
         vl = bt
       }
      
-
+      
       let stk = this.state.keyy//;
       let last_str;
       if (stk) last_str = stk.toString().substr(-1);
@@ -456,7 +459,7 @@ class App extends Component {
       } else {
          this.setst(vl)
       }
-
+      
       
     }
 
