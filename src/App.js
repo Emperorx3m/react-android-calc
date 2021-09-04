@@ -36,7 +36,7 @@ class App extends Component {
     })
 
     window.addEventListener('keydown', (event) => {
-      let num = ['1', '2', '3', '/', '4', '5', '6', '-', '7', '8', '9', '+', '.', '0', '=', '*', '(', ')', 'Backspace', '%', '!', '^'];
+      let num = ['1', '2', '3', '/', '4', '5', '6', '-', '7', '8', '9', '+', '.', '0', '=', '*', '(', ')', 'Backspace', '%', '!', '^', 'Enter','s', 'c', 't', 'l'];
       let keyyy = event.key
 
       if (num.includes(keyyy)) {
@@ -180,24 +180,31 @@ class App extends Component {
               let d = []
               let td = ['(57.2957795130)']
               let tr = ['(0.01745329300)']
-
+////////////FIND ACTION
               let findaction = (i_pos2, i) => {
                 let s = i_pos2 + i.length
+
                 if (invsct.includes(i.substr(0, 4))) {
 
                   if (!td.includes(stkcopy.slice(s - 16, s - 1))) {
                     let endd = stkcopy.slice(s);
-                    stkcopy = stkcopy.replace(stkcopy.substr(s - 1), this.todeg()) + endd
+                    stkcopy = stkcopy.slice(0, s - 1) + this.todeg() + endd
                   }// includes
                 } else if (sct.includes(i.substr(0, 3))) {
+                  // if (i_pos2 === -1) {
+                  //     s +=1
+                  // }
                
                   if (!tr.includes(stkcopy.slice(s - 1, s + 15))) {
                     let endd = stkcopy.slice(s);
-                    stkcopy = stkcopy.replace(stkcopy.substr(s - 1), this.torad()) + endd
+                    
+                    stkcopy = stkcopy.slice(0, s - 1) + this.torad() + endd
+                    //stkcopy.replace(stkcopy.substr(i_pos2 === -1 ? s : s - 1), this.torad()) + endd
 
                   }//if includes
-                }//else non inv
+                }//else non invs
               }
+//////////////FINDACTION END              
               let s = 0;
               let p = 0;
               let iindex = (str, start, sash) =>  {
@@ -216,7 +223,6 @@ class App extends Component {
 //forish loop
               let forish = (i_pos2,nester) => {
                 let s_str;
-
                 for (let s = i_pos2; s <= stkcopy.length; s++) {
                   s_str = stkcopy.slice(i_pos2, s)
                   c = s_str.match(ob)
@@ -225,13 +231,13 @@ class App extends Component {
                     if (c.length === d.length) {
                       if (invsct.includes(nester.substr(0, 4)) && !td.includes(stkcopy.slice(s - 16, s - 1))) {
                         let endd = stkcopy.slice(s);
-                        stkcopy = stkcopy.replace(stkcopy.substr(s - 1), this.todeg()) + endd
+                        stkcopy = stkcopy.slice(0, s - 1) + this.todeg() + endd
 
                       }
                       else if (sct.includes(nester.substr(0, 3)) && !tr.includes(stkcopy.slice(s-1, s + 15))) {
                         let endd = stkcopy.slice(s);
-                        stkcopy = stkcopy.replace(stkcopy.substr(s - 1), this.torad()) + endd
-
+                        stkcopy = stkcopy.slice(0, s - 1) + this.torad() + endd
+                        
                       }
 
 
@@ -248,6 +254,7 @@ class App extends Component {
                 let i = x[0];
                  let i_pos = x.index
                   let i_pos2 = iindex(stkcopy, i_pos, i)
+                  let i_pos2x
                     if(findob(i).length !== findcb(i).length) {
                         nest = i.slice(4)
                         let nester = i.substr(0,4)
@@ -265,17 +272,24 @@ class App extends Component {
                             }
                             else{
                               nest = '';
-                              findaction(i_pos2, inner)
+                              if (i_pos2 === -2) {
+                                i_pos2x = 0
+                              } else {
+                                i_pos2x = i_pos2
+                              }
+                              findaction(i_pos2x, inner)
                             }
                           })//find nest   
                        } //while
                     }else{
-                      
-                      
-                      findaction(i_pos2,i);
+                      if (i_pos2 === -2) {
+                        i_pos2x = 0
+                      } else {
+                        i_pos2x = i_pos2
+                      }
+                      findaction(i_pos2x,i);
                     }//if !==
                 })
-                
                cl = parser.evaluate(stkcopy)
              
               return new Intl.NumberFormat().format(cl)
@@ -284,7 +298,7 @@ class App extends Component {
             else if(radd){
 
                cl = parser.evaluate(stkcopy)
-              return new Intl.NumberFormat().format(cl)
+              return new Intl.NumberFormat().format(cl).toFixed(10)
             }
 
               
@@ -364,7 +378,7 @@ class App extends Component {
           this.clearr();
           
         }
-        else if(vl === '='){
+        else if (vl === '=' || vl === 'Enter'){
           this.equal();
         }
         
@@ -399,11 +413,11 @@ class App extends Component {
           }, this.calc_on_keyup)
         }
 
-        else if (vl === 'sin') this.setst('sin(');
-        else if (vl === 'cos') this.setst('cos(');
-        else if (vl === 'tan') this.setst('tan(');
+        else if (vl === 'sin' || vl === 's') this.setst('sin(');
+        else if (vl === 'cos' || vl === 'c') this.setst('cos(');
+        else if (vl === 'tan' || vl === 't') this.setst('tan(');
         else if (vl === 'In') this.setst('In(');
-        else if (vl === 'log') this.setst('log(');
+        else if (vl === 'log' || vl === 'l') this.setst('log(');
         else if (vl === 'sin⁻¹') this.setst('sin⁻¹(');
         else if (vl === 'cos⁻¹') this.setst('cos⁻¹(');
         else if (vl === 'tan⁻¹') this.setst('tan⁻¹(');
