@@ -47,7 +47,7 @@ class Nav extends Component{
 
                 <div id="navbarBasicExample" className="navbar-menu is-active" >
                         <div className="navbar-start">
-                               <div className="navbar-item">
+                               <div className="navbar-item" style="display: block !important;">
                                 <div className="columns">
                                     <div className="column">
                                         {one.map(
