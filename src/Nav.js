@@ -16,9 +16,9 @@ class Nav extends Component{
         
     render(){
     
-        const fout = () => {
-            alert('lost focus')
-        }
+        // const fout = () => {
+        //     alert('lost focus')
+        // }
 
         const oc = () => {
             document.querySelector('.navbar-menu').classList.toggle('is-active');
@@ -47,7 +47,7 @@ class Nav extends Component{
 
                 <div id="navbarBasicExample" className="navbar-menu is-active" >
                         <div className="navbar-start">
-                               <div className="navbar-item" style="display: block !important;">
+                               <div className="navbar-item">
                                 <div className="columns">
                                     <div className="column">
                                         {one.map(

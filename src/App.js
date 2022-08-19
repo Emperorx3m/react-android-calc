@@ -17,7 +17,7 @@ const ignor = ['+', '-', '/', '*']
 
 class App extends Component {
     constructor(props) {
-      super();
+      super(props);
 
       this.state = {
         keyy: '',
@@ -488,7 +488,7 @@ class App extends Component {
                   
                  
                 </div>
-            <Inpp id="totov" onch={this.onch} inp={'is-hidden input is-fullwidth has-text-right'} vallu={this.state.tot} />
+            <Inpp id="totov" onch={this.onch} inp={'is-hidden input is-fullwidth has-text-right'} vallu={this.state.tot} disabled />
 
                     <div className="columns">
                       <div className="column">
